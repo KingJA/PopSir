@@ -15,7 +15,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openPop(View view) {
         Button btn = findViewById(R.id.btn);
-        ListPop listPop = new ListPop(this);
-        listPop.showAsDropDown(btn);
+        new ListPop.Builder(this)
+                .setPopHeight(500)
+                .setPopAdapter(new PopAdapter(this))
+                .build()
+                .showAsDropDown(btn);
     }
+
 }

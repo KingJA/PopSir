@@ -11,16 +11,16 @@ import android.widget.BaseAdapter;
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
-public class Adapter extends BaseAdapter {
+public class PopAdapter extends BaseAdapter {
     private Context context;
 
-    public Adapter(Context context) {
+    public PopAdapter(Context context) {
         this.context = context;
     }
 
     @Override
     public int getCount() {
-        return 10;
+        return 20;
     }
 
     @Override
@@ -33,9 +33,11 @@ public class Adapter extends BaseAdapter {
         return 0;
     }
 
+
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder = null;
+        ViewHolder viewHolder ;
         if (convertView == null) {
             convertView = View
                     .inflate(context, R.layout.item, null);
