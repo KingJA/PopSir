@@ -16,10 +16,10 @@ import android.widget.PopupWindow;
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
-public class ListPop extends PopupWindow implements PopupWindow.OnDismissListener {
+public class BasePop extends PopupWindow implements PopupWindow.OnDismissListener {
     private Context context;
 
-    public ListPop(Builder builder) {
+    public BasePop(Builder builder) {
         super(builder.context);
         this.context = builder.context;
         setWidth(builder.width);
@@ -27,11 +27,11 @@ public class ListPop extends PopupWindow implements PopupWindow.OnDismissListene
         setBackgroundDrawable(new ColorDrawable());
         setOutsideTouchable(builder.touchable);
         setAnimationStyle(builder.animationStyle);
+        setOnDismissListener(this);
         View view = View.inflate(builder.context, R.layout.pop, null);
         ListView lv_pop = view.findViewById(R.id.lv_pop);
         lv_pop.setAdapter(builder.adapter);
         setContentView(view);
-        setOnDismissListener(this);
     }
 
     @Override
@@ -49,7 +49,6 @@ public class ListPop extends PopupWindow implements PopupWindow.OnDismissListene
         WindowManager.LayoutParams lp = ((Activity) context).getWindow().getAttributes();
         lp.alpha = bgAlpha;
         ((Activity) context).getWindow().setAttributes(lp);
-
     }
 
     public static class Builder {
@@ -95,11 +94,8 @@ public class ListPop extends PopupWindow implements PopupWindow.OnDismissListene
             return this;
         }
 
-
-        public ListPop build() {
-            return new ListPop(this);
+        public BasePop build() {
+            return new BasePop(this);
         }
-
-
     }
 }

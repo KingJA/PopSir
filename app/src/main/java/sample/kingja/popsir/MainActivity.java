@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openPop(View view) {
         Button btn = findViewById(R.id.btn);
-        new ListPop.Builder(this)
+        new BasePop.Builder(this)
                 .setPopHeight(500)
                 .setPopAdapter(new PopAdapter(this))
                 .build()
