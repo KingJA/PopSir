@@ -10,8 +10,6 @@ import android.view.ViewGroup;
  * Email:kingjavip@gmail.com
  */
 public class PopConfig {
-    private static final String TAG = "BasePop";
-    protected Builder builder;
     public int width = ViewGroup.LayoutParams.MATCH_PARENT;
     public int height = ViewGroup.LayoutParams.WRAP_CONTENT;
     public int animationStyle = R.style.PopupTopAnimation;
@@ -29,9 +27,10 @@ public class PopConfig {
     }
 
     public static class Builder {
+        private static final int ANIMATION_STYLE_DEFAULT = -1;
         private int width = ViewGroup.LayoutParams.MATCH_PARENT;
         private int height = ViewGroup.LayoutParams.WRAP_CONTENT;
-        private int animationStyle = R.style.PopupTopAnimation;
+        private int animationStyle = ANIMATION_STYLE_DEFAULT;
         private boolean touchable = true;
         private Context context;
         private int maxHeight;

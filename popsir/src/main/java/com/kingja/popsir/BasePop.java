@@ -14,27 +14,30 @@ import android.widget.PopupWindow;
  * Email:kingjavip@gmail.com
  */
 public abstract class BasePop extends PopupWindow implements PopupWindow.OnDismissListener {
-    private static final String TAG = "BasePop";
     protected Context context;
-
+    protected PopConfig popConfig;
 
     public BasePop(PopConfig popConfig) {
         super(popConfig.context);
         this.context = popConfig.context;
-        this. setWidth(popConfig.width);
-        this. setHeight(popConfig.height);
+        this.popConfig = popConfig;
+        this.setWidth(popConfig.width);
+        this.setHeight(popConfig.height);
         this.setBackgroundDrawable(new ColorDrawable());
         this.setOutsideTouchable(popConfig.touchable);
         this.setAnimationStyle(popConfig.animationStyle);
         this.setOnDismissListener(this);
         this.setFocusable(true);
-        setContentView(View.inflate(context, getLayoutId(), null));
+        setContentView(getLayoutView());
         initView(getContentView());
+        initPop();
     }
 
-    public abstract void initView(View contentView);
+    protected abstract void initPop();
 
-    public abstract int getLayoutId();
+    protected abstract void initView(View contentView);
+
+    protected abstract View getLayoutView();
 
     @Override
     public void onDismiss() {

@@ -1,6 +1,7 @@
 package com.kingja.popsir;
 
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
@@ -12,24 +13,48 @@ import android.widget.ListView;
  */
 public class ListPop extends BasePop {
 
-    private ListView lv_pop;
-
     public ListPop(PopConfig popConfig) {
         super(popConfig);
     }
 
     @Override
-    public void initView(View contentView) {
-        lv_pop = contentView.findViewById(R.id.lv_pop);
-
+    protected void initPop() {
+        if (popConfig.animationStyle == -1) {
+            setAnimationStyle(R.style.PopupTopAnimation);
+        }
     }
+
+    @Override
+    public void initView(View contentView) {
+        contentView.setBackgroundColor(0xffffffff);
+    }
+
+    public <T> ListPop setOnItemClickListener(final OnItemClickListener<T> onItemClickListener) {
+        ((ListView) getContentView()).setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                T item = (T) parent.getItemAtPosition(position);
+                if (onItemClickListener != null) {
+                    onItemClickListener.onItemClick(item, position);
+                }
+                dismiss();
+            }
+        });
+        return this;
+    }
+
+    public interface OnItemClickListener<T> {
+        public void onItemClick(T item, int position);
+    }
+
     public ListPop setAdapter(BaseAdapter adapter) {
-        lv_pop.setAdapter(adapter);
+        ((ListView) getContentView()).setAdapter(adapter);
         return this;
     }
 
     @Override
-    public int getLayoutId() {
-        return R.layout.pop;
+    public View getLayoutView() {
+
+        return new ListView(context);
     }
 }

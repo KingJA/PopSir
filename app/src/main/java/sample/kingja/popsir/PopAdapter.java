@@ -4,6 +4,9 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import java.util.List;
 
 /**
  * Description:TODO
@@ -13,19 +16,21 @@ import android.widget.BaseAdapter;
  */
 public class PopAdapter extends BaseAdapter {
     private Context context;
+    private List<String> list;
 
-    public PopAdapter(Context context) {
+    public PopAdapter(Context context, List<String> list) {
         this.context = context;
+        this.list = list;
     }
 
     @Override
     public int getCount() {
-        return 20;
+        return list.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return list.get(position);
     }
 
     @Override
@@ -33,11 +38,9 @@ public class PopAdapter extends BaseAdapter {
         return 0;
     }
 
-
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder ;
+        ViewHolder viewHolder;
         if (convertView == null) {
             convertView = View
                     .inflate(context, R.layout.item, null);
@@ -46,14 +49,17 @@ public class PopAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
+        viewHolder.tv.setText(list.get(position));
         return convertView;
     }
 
     public class ViewHolder {
         public final View root;
+        public TextView tv;
 
         public ViewHolder(View root) {
             this.root = root;
+             tv = root.findViewById(R.id.tv);
         }
     }
 }
