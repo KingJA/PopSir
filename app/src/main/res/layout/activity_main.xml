@@ -6,11 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="sample.kingja.popsir.MainActivity"
-    android:background="#bebebe">
+    android:background="#bebebe"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/btn"
         android:onClick="openPop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"/>
+
+    <Button
+        android:layout_marginTop="200dp"
+        android:onClick="say"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hello World!"/>
