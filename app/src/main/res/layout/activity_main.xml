@@ -1,25 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="sample.kingja.popsir.MainActivity"
     android:background="#bebebe"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context="sample.kingja.popsir.MainActivity">
 
     <Button
         android:id="@+id/btn"
-        android:onClick="openPop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="openPop"
         android:text="Hello World!"/>
 
     <Button
-        android:layout_marginTop="200dp"
-        android:onClick="say"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:onClick="say"
         android:text="Hello World!"/>
+    <!--<attr name="spinner_textSize" format="dimension"/>-->
+    <!--<attr name="spinner_textColor" format="color|reference"/>-->
+    <!--<attr name="spinner_indicatorColor" format="color|reference"/>-->
+    <!--<attr name="spinner_indicatorSzie" format="dimension"/>-->
+    <!--<attr name="spinner_marginIndicator" format="dimension"/>-->
+    <!--<attr name="spinner_indicatorText" format="string"/>-->
+    <com.kingja.popsir.PopSpinner
+        android:id="@+id/spinner1"
+        android:background="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:spinner_indicatorSelColor="#ca3b06"
+        app:spinner_indicatorNorColor="#000000"
+        app:spinner_indicatorSzie="6dp"
+        app:spinner_indicatorText="选择器"
+        app:spinner_marginIndicator="6dp"
+        app:spinner_textNorColor="#000000"
+        app:spinner_textSelColor="#ca3b06"
+        app:spinner_textSize="12sp"/>
+
+    <com.kingja.popsir.PopSpinner
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:spinner_indicatorSelColor="#ca3b06"
+        app:spinner_indicatorNorColor="#000000"
+        app:spinner_indicatorSzie="6dp"
+        app:spinner_indicatorText="选择器"
+        app:spinner_marginIndicator="6dp"
+        app:spinner_textNorColor="#000000"
+        app:spinner_textSelColor="#ca3b06"
+        app:spinner_textSize="12sp"/>
+
+    <com.kingja.popsir.PopSpinner
+        android:paddingRight="24dp"
+        android:paddingLeft="24dp"
+        android:background="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:spinner_indicatorSelColor="#ca3b06"
+        app:spinner_indicatorNorColor="#000000"
+        app:spinner_indicatorSzie="6dp"
+        app:spinner_indicatorText="选择器"
+        app:spinner_marginIndicator="12dp"
+        app:spinner_textNorColor="#000000"
+        app:spinner_textSelColor="#ca3b06"
+        app:spinner_textSize="12sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.kingja.popsir.PopSpinner
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:spinner_indicatorSelColor="#ca3b06"
+            app:spinner_indicatorNorColor="#000000"
+            app:spinner_indicatorSzie="6dp"
+            app:spinner_indicatorText="选择器"
+            app:spinner_marginIndicator="12dp"
+            app:spinner_textNorColor="#000000"
+            app:spinner_textSelColor="#ca3b06"
+            app:spinner_textSize="12sp"/>
+        <com.kingja.popsir.PopSpinner
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:spinner_indicatorSelColor="#ca3b06"
+            app:spinner_indicatorNorColor="#000000"
+            app:spinner_indicatorSzie="6dp"
+            app:spinner_indicatorText="选择器"
+            app:spinner_marginIndicator="12dp"
+            app:spinner_textNorColor="#000000"
+            app:spinner_textSelColor="#ca3b06"
+            app:spinner_textSize="12sp"/>
+        <com.kingja.popsir.PopSpinner
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:spinner_indicatorSelColor="#ca3b06"
+            app:spinner_indicatorNorColor="#000000"
+            app:spinner_indicatorSzie="6dp"
+            app:spinner_indicatorText="选择器"
+            app:spinner_marginIndicator="12dp"
+            app:spinner_textNorColor="#000000"
+            app:spinner_textSelColor="#ca3b06"
+            app:spinner_textSize="12sp"/>
+        <com.kingja.popsir.PopSpinner
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:spinner_indicatorSelColor="#ca3b06"
+            app:spinner_indicatorNorColor="#000000"
+            app:spinner_indicatorSzie="6dp"
+            app:spinner_indicatorText="选择器"
+            app:spinner_marginIndicator="12dp"
+            app:spinner_textNorColor="#000000"
+            app:spinner_textSelColor="#ca3b06"
+            app:spinner_textSize="12sp"/>
+
+    </LinearLayout>
 
 </LinearLayout>
