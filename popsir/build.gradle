@@ -30,7 +30,7 @@ publish {
     artifactId = 'popsir'
     userOrg = 'kingja'
     groupId = 'com.kingja.popsir'
-    publishVersion = '1.2.0'
+    publishVersion = '1.0.1'
     desc = 'Popupwindow helper for androd'
     website = 'https://github.com/KingJA/PopSir'
 }

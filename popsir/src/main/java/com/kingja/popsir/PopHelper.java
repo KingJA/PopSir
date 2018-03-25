@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.widget.BaseAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 
@@ -66,10 +65,8 @@ public class PopHelper {
             @Override
             public void setOnSpinnerStatusChanged(boolean opened) {
                 if (opened) {
-                    Log.e(TAG, "开: ");
                     listPop.showAsDropDown(popSpinner);
                 } else {
-                    Log.e(TAG, "关: ");
                     listPop.dismiss();
                 }
             }
