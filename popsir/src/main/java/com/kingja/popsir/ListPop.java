@@ -1,8 +1,10 @@
 package com.kingja.popsir;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 
 /**
@@ -13,8 +15,13 @@ import android.widget.ListView;
  */
 public class ListPop extends BasePop {
 
-    public ListPop(PopConfig popConfig) {
-        super(popConfig);
+
+    public ListPop(Context context) {
+        super(context);
+    }
+
+    public ListPop(Context context, PopConfig popConfig) {
+        super(context, popConfig);
     }
 
     @Override
@@ -57,4 +64,6 @@ public class ListPop extends BasePop {
 
         return new ListView(context);
     }
+
+
 }

@@ -7,8 +7,10 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="PopupTopAnimation" parent="android:Animation">
-        <item name="android:windowEnterAnimation">@anim/spaner_enter</item>
-        <item name="android:windowExitAnimation">@anim/spaner_exit</item>
+    <style name="PopTop2Bottom" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/spaner_enter_down</item>
+        <item name="android:windowExitAnimation">@anim/spaner_exit_up</item>
     </style>
+
+
 </resources>

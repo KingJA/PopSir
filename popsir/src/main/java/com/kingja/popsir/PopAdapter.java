@@ -1,4 +1,4 @@
-package sample.kingja.popsir;
+package com.kingja.popsir;
 
 import android.content.Context;
 import android.view.View;

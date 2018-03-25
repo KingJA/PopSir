@@ -17,9 +17,13 @@ public abstract class BasePop extends PopupWindow implements PopupWindow.OnDismi
     protected Context context;
     protected PopConfig popConfig;
 
-    public BasePop(PopConfig popConfig) {
-        super(popConfig.context);
-        this.context = popConfig.context;
+    public BasePop(Context context) {
+        this(context, null);
+    }
+
+    public BasePop(Context context, PopConfig popConfig) {
+        super(context);
+        this.context = context;
         this.popConfig = popConfig;
         this.setWidth(popConfig.width);
         this.setHeight(popConfig.height);
@@ -55,5 +59,4 @@ public abstract class BasePop extends PopupWindow implements PopupWindow.OnDismi
         lp.alpha = bgAlpha;
         ((Activity) context).getWindow().setAttributes(lp);
     }
-
 }

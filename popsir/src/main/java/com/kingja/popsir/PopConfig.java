@@ -14,7 +14,6 @@ public class PopConfig {
     public int height = ViewGroup.LayoutParams.WRAP_CONTENT;
     public int animationStyle = R.style.PopupTopAnimation;
     public boolean touchable = true;
-    public Context context;
     public int maxHeight;
 
     public PopConfig(Builder builder) {
@@ -22,7 +21,6 @@ public class PopConfig {
         this.height = builder.height;
         this.animationStyle = builder.animationStyle;
         this.touchable = builder.touchable;
-        this.context = builder.context;
         this.maxHeight = builder.maxHeight;
     }
 
@@ -32,12 +30,8 @@ public class PopConfig {
         private int height = ViewGroup.LayoutParams.WRAP_CONTENT;
         private int animationStyle = ANIMATION_STYLE_DEFAULT;
         private boolean touchable = true;
-        private Context context;
         private int maxHeight;
 
-        public Builder(Context context) {
-            this.context = context;
-        }
 
         public Builder setPopWidth(int width) {
             this.width = width;

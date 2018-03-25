@@ -206,4 +206,9 @@ public class PopSpinner extends View {
         spinnerOpened=false;
         invalidate();
     }
+
+    public void close() {
+        spinnerOpened=false;
+        invalidate();
+    }
 }
