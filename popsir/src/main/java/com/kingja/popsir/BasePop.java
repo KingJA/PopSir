@@ -18,7 +18,7 @@ public abstract class BasePop extends PopupWindow implements PopupWindow.OnDismi
     protected PopConfig popConfig;
 
     public BasePop(Context context) {
-        this(context, null);
+        this(context, new PopConfig.Builder().build());
     }
 
     public BasePop(Context context, PopConfig popConfig) {
