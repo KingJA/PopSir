@@ -1,4 +1,4 @@
-package sample.kingja.popsir;
+package com.kingja.popwindowsir;
 
 import android.content.Context;
 import android.view.View;
@@ -6,20 +6,19 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-
 import java.util.List;
 
 /**
  * Description:TODO
- * Create Time:2018/3/24 19:18
+ * Create Time:2018/3/15 14:51
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
-public class ItemAdapter extends BaseAdapter {
-    private final Context context;
-    private final List<PopItem> list;
+public class PopAdapter extends BaseAdapter {
+    private Context context;
+    private List<String> list;
 
-    public ItemAdapter(Context context, List<PopItem> list) {
+    public PopAdapter(Context context, List<String> list) {
         this.context = context;
         this.list = list;
     }
@@ -36,7 +35,7 @@ public class ItemAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return position;
+        return 0;
     }
 
     @Override
@@ -50,7 +49,7 @@ public class ItemAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.tv.setText(list.get(position).getItemName());
+        viewHolder.tv.setText(list.get(position));
         return convertView;
     }
 
@@ -60,7 +59,7 @@ public class ItemAdapter extends BaseAdapter {
 
         public ViewHolder(View root) {
             this.root = root;
-            tv = root.findViewById(R.id.tv);
+             tv = root.findViewById(R.id.tv);
         }
     }
 }

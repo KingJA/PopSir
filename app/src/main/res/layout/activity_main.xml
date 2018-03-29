@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:onClick="openPop"
         android:text="Hello World!"/>
-    <com.kingja.popsir.PopSpinner
+    <com.kingja.popwindowsir.PopSpinner
         android:id="@+id/spinner1"
         android:background="#ffffff"
         android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
         app:spinner_textSelColor="#ca3b06"
         app:spinner_textSize="12sp"/>
 
-    <com.kingja.popsir.PopSpinner
+    <com.kingja.popwindowsir.PopSpinner
         android:id="@+id/spinner2"
         android:background="#ffffff"
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
         app:spinner_textSelColor="#ca3b06"
         app:spinner_textSize="12sp"/>
 
-    <com.kingja.popsir.PopSpinner
+    <com.kingja.popwindowsir.PopSpinner
         android:id="@+id/spinner3"
         android:paddingRight="24dp"
         android:paddingLeft="24dp"

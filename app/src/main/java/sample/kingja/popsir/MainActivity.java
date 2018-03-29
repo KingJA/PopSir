@@ -4,14 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
-import com.kingja.popsir.ListPop;
-import com.kingja.popsir.PopAdapter;
-import com.kingja.popsir.PopConfig;
-import com.kingja.popsir.PopHelper;
-import com.kingja.popsir.PopSpinner;
+import com.kingja.popwindowsir.PopConfig;
+import com.kingja.popwindowsir.PopHelper;
+import com.kingja.popwindowsir.PopSpinner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
