@@ -49,6 +49,11 @@ public abstract class BasePop extends PopupWindow implements PopupWindow.OnDismi
     }
 
     @Override
+    public void dismiss() {
+        super.dismiss();
+    }
+
+    @Override
     public void showAsDropDown(View anchor) {
         super.showAsDropDown(anchor);
         setAlpha(0.7f);

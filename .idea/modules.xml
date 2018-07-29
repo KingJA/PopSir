@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/PopSir.iml" filepath="$PROJECT_DIR$/.idea/PopSir.iml" />
       <module fileurl="file://$PROJECT_DIR$/PopSir.iml" filepath="$PROJECT_DIR$/PopSir.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\TDR\PopSir\popwindowsir\popsir.iml" filepath="E:\TDR\PopSir\popwindowsir\popsir.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:/TDR/PopSir/popwindowsir/popsir.iml" filepath="E:/TDR/PopSir/popwindowsir/popsir.iml" />
+      <module fileurl="file://$PROJECT_DIR$/popwindowsir/popwindowsir.iml" filepath="$PROJECT_DIR$/popwindowsir/popwindowsir.iml" />
       <module fileurl="file://$PROJECT_DIR$/popwindowsir/popwindowsir.iml" filepath="$PROJECT_DIR$/popwindowsir/popwindowsir.iml" />
     </modules>
   </component>
