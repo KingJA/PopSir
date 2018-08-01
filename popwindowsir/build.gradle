@@ -3,7 +3,6 @@ apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 26
-
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 26
@@ -12,25 +11,28 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    buildToolsVersion '26.0.2'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
 }
 publish {
     artifactId = 'popwindowsir'
     userOrg = 'kingja'
     groupId = 'com.kingja.popwindowsir'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.2'
     desc = 'Popupwindow helper for androd'
     website = 'https://github.com/KingJA/PopSir'
 }

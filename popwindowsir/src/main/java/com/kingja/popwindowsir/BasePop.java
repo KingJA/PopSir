@@ -51,6 +51,7 @@ public abstract class BasePop extends PopupWindow implements PopupWindow.OnDismi
     @Override
     public void dismiss() {
         super.dismiss();
+        setAlpha(1f);
     }
 
     @Override

@@ -142,11 +142,8 @@ public class PopSpinner extends View {
         super.onSizeChanged(w, h, oldw, oldh);
         width = getMeasuredWidth();
         height = getMeasuredHeight();
-        Log.e(TAG, "width: " + width + " height: " + height);
-//        textBaseX = width * 0.5f - textWidth * 0.5f;
         textBaseX = getPaddingLeft()+DEFAULT_RIGHT_LEFT;
         textBaseY = height * 0.5f + (textHeight) * 0.5f - textPaint.getFontMetrics().bottom;
-        Log.e(TAG, "textBaseY: " + textBaseY + " textBaseX: " + textBaseX);
 
 
     }
